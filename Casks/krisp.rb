@@ -1,6 +1,6 @@
 cask "krisp" do
-  version "1.22.7"
-  sha256 "504ab202842d9b3fc6c291effe564710e779c543ba4b25a29697459bb44a47b1"
+  version "1.25.3"
+  sha256 "a995ac186541c69393d6a72529613bd719e1c9a5ea2eb4c135bcb4658dc85912"
 
   url "https://cdn.krisp.ai/mac/release/v#{version.major}.#{version.minor}/krisp_#{version}.pkg"
   name "Krisp"
@@ -17,6 +17,7 @@ cask "krisp" do
 
   pkg "krisp_#{version}.pkg"
 
-  uninstall quit:    "ai.krisp.krispMac",
-            pkgutil: "ai.krisp.krispMac"
+  uninstall quit:      "ai.krisp.krispMac",
+            launchctl: "ai.krisp.krispMac.cameraAssistant",
+            pkgutil:   "ai.krisp.krispMac"
 end

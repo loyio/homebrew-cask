@@ -1,6 +1,6 @@
 cask "marginnote" do
-  version "3.7.9,3.7.9002"
-  sha256 "3cead02017d8b93dfc45aebce70318917fecc262a8f3c6806c9e3a6a3ae58956"
+  version "3.7.12,3.7.12005"
+  sha256 "f0a17470c5b7e51949f1309bb2e0909830e03d6d9b5272b4eaed94bb008df0cc"
 
   url "https://marginstudy.com/mac/MarginNote#{version.major}.dmg",
       verified: "marginstudy.com/"

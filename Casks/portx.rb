@@ -1,16 +1,16 @@
 cask "portx" do
-  version "1.1.3"
-  sha256 "1ac70309669c4f8cd48a63f12095b62b66012483dc4eaba635e40f86735255e8"
+  version "1.1.6,8"
+  sha256 "b766d76352bfde76d2f2a6252a6cf21b45cc3475cd1848abe20656e2bb0f44cc"
 
-  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version}.dmg",
+  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.before_comma}.dmg",
       verified: "cdn.netsarang.net/"
   name "portx"
   desc "SSH Client"
   homepage "https://portx.online/en/portx/"
 
   livecheck do
-    url :homepage
-    regex(/PortX-(\d+(?:\.\d+)*)\.dmg/i)
+    url :url
+    strategy :extract_plist
   end
 
   app "PortX.app"

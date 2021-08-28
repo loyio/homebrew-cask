@@ -1,12 +1,12 @@
 cask "zoom" do
-  version "5.7.1.499"
+  version "5.7.6.1320"
 
   if Hardware::CPU.intel?
-    sha256 "6fae45254a21f6082ef79e204f84fe22a91b84cd33f73ec53349dc33489f86a8"
+    sha256 "14aca0f9273f0e7d5d8bd7931a74bd14772dd2eb3be3b6d966d6be060ac54242"
 
     url "https://cdn.zoom.us/prod/#{version}/Zoom.pkg"
   else
-    sha256 "acff046de909690bfb3c7a81103399f8923ee26aecce46b8e50ef26e6ed5a477"
+    sha256 "48994fb9c8435f51fa70c503c44283cc944e16ecb1b773c42d09fb0d82ef686f"
 
     url "https://cdn.zoom.us/prod/#{version}/arm64/Zoom.pkg"
   end
@@ -43,7 +43,7 @@ cask "zoom" do
   end
 
   uninstall signal:  ["KILL", "us.zoom.xos"],
-            pkgutil: "us.zoom.pkg.videmeeting",
+            pkgutil: "us.zoom.pkg.videomeeting",
             delete:  [
               "/Applications/zoom.us.app",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",

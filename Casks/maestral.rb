@@ -1,6 +1,6 @@
 cask "maestral" do
-  version "1.4.6"
-  sha256 "b37235199aade10baa8a7b6163c1f607be424ef7333ad402c925b4425bb07642"
+  version "1.4.8"
+  sha256 "51863aaf3fbd8b62250fe51cb8152b2dd65f558c0bee277c2e3c257cc8bea6b4"
 
   url "https://github.com/SamSchott/maestral/releases/download/v#{version}/Maestral-#{version}.dmg",
       verified: "github.com/SamSchott/maestral"

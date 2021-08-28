@@ -1,9 +1,18 @@
 cask "spotify" do
-  version "1.1.62.583.gdac868ed,1.1.62.583.gdac868ed-44"
-  sha256 :no_check
+  if Hardware::CPU.intel?
+    version "1.1.66.580.gbd43cbc9,1.1.66.580.gbd43cbc9-18"
+    sha256 :no_check
 
-  url "https://download.scdn.co/Spotify.dmg",
-      verified: "scdn.co/"
+    url "https://download.scdn.co/Spotify.dmg",
+        verified: "scdn.co/"
+  else
+    version "1.1.66.578.gc54d0f69"
+    sha256 :no_check
+
+    url "https://download.scdn.co/SpotifyBetaARM64.dmg",
+        verified: "scdn.co/"
+  end
+
   name "Spotify"
   desc "Music streaming service"
   homepage "https://www.spotify.com/"
